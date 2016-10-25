@@ -6,8 +6,29 @@
 	<meta name="author" content="李莉" />
 	<title></title>
 	<style>
-		ul {
+		* {
+			box-sizing: border-box;
+			
+		}
+		ul{
+			list-style:none;
+		}
+		.main {
+			width: 300px;
+			position: absolute;
+			right: 200px;
+			margin: auto;
+			
+		}
+		
+		 li {
+			margin: 20px auto;
+			border-bottom: 1px dashed #FFF;
+		}
+		
+		#menu {
 			margin: 0;
+			padding: 0;
 			position: fixed;
 			width: 100%;
 			z-index: 9;
@@ -17,61 +38,135 @@
 			background-color: blanchedalmond;
 		}
 		
-		li {
+		#menu li {
 			float: left;
 			list-style: none;
 			margin-right: 10px;
+			border:none;
 		}
 		
 		#section0 {
 			margin-top: 60px;
+			position: relative;
+		}
+		#section0 ul{
+         
+		   bottom:10px;
+		}
+		.left {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			position: relative;
+			top: -100px;
+			background: #333;
+			margin: 0 auto;
+		}
+	   .top{
+		   position:absolute;
+		   top:200px;
+		   left:50px;
+	   }
+
+		}
+		.right {
+			position: relative;
+			left: 100px;
 		}
 		
 		#section3 {
 			background-color: gray;
 		}
 		
-		.main {
-			width:200px;
-            height:300px;
-            border:1px solid black;
-            margin:30px auto;
+		h1 {
+			position: absolute;
+			top: 10px;
+			left: 46%;
+		}
+		
+		.clear {
+			clear: both
+		}
+		.transform{
+			margin-left:10px;
+			animation: fadeInLeft 3s;
+		}
+		.rotate {
+			animation: fadeInRight 2s;
 		}
 	</style>
 	<link rel="stylesheet" href="lib/jquery.fullpage.css">
+	<link rel="stylesheet" href="lib/animate.css">
 </head>
 
 <body>
 	<ul id="menu">
-		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">个人信息</a></li>
-		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-		<li data-menuanchor="3rdPage"><a href="#3rdPage">个人能力</a></li>
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">首页</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">自我介绍</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">专业技能</a></li>
 		<li data-menuanchor="fourthPage"><a href="#fourthPage">项目</a></li>
 	</ul>
 	<div id="fullpage">
 		<div class="section active" id="section0">
-			<h1>我  . 之家</h1>
-			<article class="main"> </article>
+			<h1>我 . 之家</h1>
+			<div class="left"><img src="" alt=""></div>
+			<ul class="main">
+				<li><span>姓名:</span>李莉</li>
+				<li><span>性别:</span>女</li>
+				<li><span>民族:</span>汉</li>
+				<li><span>婚姻状况:</span>未婚</li>
+				<li><span>年龄:</span>23</li>
+				<li><span>现所在地:</span>河南省郑州市</li>
+				<li><span>兴趣爱好:</span>购物、阅读</li>
+				<li><span>联系电话:</span>15639911564</li>
+				<li><span>电子邮件:</span>m15639911564_1@163.com</li>
+			</ul>
+			
+			<div class="right"><img src="image/homeTitle.png" alt=""></div>
+
+
 		</div>
 
 		<div class="section" id="section1">
-			<h1>No wraps, no extra markup</h1>
+			<h1>自我介绍</h1>
+			<div class="top">
+				<span>自我评价:</span>
+				<ol class="transform" >
+							<li class="first">对web前端充满激情，热衷于开发优秀的web产品</li>
+							<li>注重团队协作，善于学习，乐于探索，敢于创新</li>
+							<li>对设计和交互非常感兴趣，开发产品善于从客户的角度去思考问题</li>
+							<li>能够编写java代码，可以配合后台工程师完成工作</li>
+							<li>英语没过六级且开发经验不足，但我会在将来的生活中用自己的行动克服这些问题</li>
+						</ol>
+			</div>
+			<div class="main">
+				<span>我的大学:</span>
+				<ul class=" rotate">
+					<li><span>学校:</span>河南科技学院</li>
+					<li><span>专业:</span>通信工程</li>
+					<li><span>学历:</span>本科</li>
+					<li><span>外语水平:</span>CET-4</li>
+					<li><span>兴趣爱好:</span>电影、足球、阅读</li>
+					<li><span>校内职务:</span>寝室长</li>
+				</ul>
+			</div>
+
 		</div>
 		<div class="section" id="section2">
-			<h1>Just the simplest demo ever</h1>
+			<h1>专业技能</h1>
 		</div>
 		<div class="section" id="section3">
 			<div class="slide ">
-				<h1>Simple Demo</h1>
+				<h2>Simple Demo</h2>
 			</div>
 			<div class="slide active">
-				<h1>Only text</h1>
+				<h2>Only text</h2>
 			</div>
 			<div class="slide">
-				<h1>And text</h1>
+				<h2>And text</h2>
 			</div>
 			<div class="slide">
-				<h1>And more text</h1>
+				<h2>And more text</h2>
 			</div>
 		</div>
 	</div>
